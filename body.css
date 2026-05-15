@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundChange 5s infinite;
+}
+
+.card {
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    padding: 2em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    animation: cardAppear 1s ease-out, cardColorChange 5s infinite;
+}
+
+.card h1 {
+    color: #ff1493;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+.card p {
+    color: #333;
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    animation: textFadeIn 2s ease-in-out 0.5s both;
+}
+
+.balloons {
+    font-size: 2em;
+    margin-top: 1em;
+    animation: balloonFloat 3s ease-in-out infinite;
+}
+
+@keyframes cardAppear {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes balloonFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: #ffe6f2;
+    }
+
+    25% {
+        background-color: #e6f2ff;
+    }
+
+    50% {
+        background-color: #f2ffe6;
+    }
+
+    75% {
+        background-color: #fff2e6;
+    }
+
+    100% {
+        background-color: #ffe6f2;
+    }
+}
+
+@keyframes cardColorChange {
+    0% {
+        background-color: #ffffff;
+    }
+
+    25% {
+        background-color: #fffacd;
+    }
+
+    50% {
+        background-color: #e0ffff;
+    }
+
+    75% {
+        background-color: #f0fff0;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
+}
